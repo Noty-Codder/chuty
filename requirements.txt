@@ -6,6 +6,7 @@ ffmpeg-python
 gitpython
 hachoir
 heroku3
+six==1.17.0
 httpx==0.23.3
 motor
 numpy>=2.1.0,<3
