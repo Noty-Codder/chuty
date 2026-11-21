@@ -53,8 +53,8 @@ UPSTREAM_REPO = getenv(
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "main")
 GIT_TOKEN = getenv("GIT_TOKEN", "")
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/betabot_hub")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/betabot_support")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/Dark_Queen_updatez")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/Dark_Queen_support")
 GITHUB = getenv("GITHUB", "https://t.me/sukoon_s")
 
 AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", "False")
