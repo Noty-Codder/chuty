@@ -183,6 +183,7 @@ async def download_video(link: str, title: str = None) -> str:
             pass
 
     return await _download_chain(video_id, "video", title)
+
 # ----------------- YOUTUBE API CLASS -----------------
 
 def _yt_cookie_opts():
@@ -192,6 +193,18 @@ def _yt_cookie_opts():
         return {"cookiefile": cf} if cf else {}
     except Exception:
         return {}
+def _base_opts() -> dict:
+    """Shared yt-dlp options. Imported by SHIVMUSIC.utils.autoplay."""
+    return {
+        "quiet": True,
+        "no_warnings": True,
+        "noplaylist": True,
+        "geo_bypass": True,
+        "retries": 3,
+        "fragment_retries": 3,
+        "extractor_args": {"youtube": ["player_client=android,web"]},
+        **_yt_cookie_opts(),
+    }
 
 class YouTubeAPI:
     def __init__(self):
